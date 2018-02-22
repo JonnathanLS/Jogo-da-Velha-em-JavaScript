@@ -25,6 +25,9 @@ div{
 	width: 160px;
 	width: 100%;
 }
+#ReiniciarJogo{
+	display: none;
+}
 #Resultado{
 	height: 100px;
 	display: none;
