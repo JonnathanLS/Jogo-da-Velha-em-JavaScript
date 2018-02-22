@@ -1,0 +1,38 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: rgb(255,250,250);
+	font-family: Georgia, serif;
+}
+div{	
+	border: 1px solid blue;
+	text-align: center;
+}
+#CorpoMenu{
+	padding: 10px;
+}
+#CorpoJogo{
+	padding: 30px;
+}
+#GrauDificuldade{
+	width: 160px;
+	text-align: center;
+}
+.Colunas{
+	height: 100px;
+	padding: 5px;
+	font-size: 55px;
+}
+.Pontuacao{
+	height: 120px;
+	padding: 50px;
+}
+@media only screen and (max-width: 400px){
+	.Colunas{
+		height: 80px;
+		padding: 5px;
+		font-size: 45px;
+	}
+}
