@@ -25,6 +25,10 @@ div{
 	width: 160px;
 	width: 100%;
 }
+#Resultado{
+	height: 100px;
+	display: none;
+}
 .Colunas{
 	height: 100px;
 	padding: 5px;
