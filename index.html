@@ -18,6 +18,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="jogoDaVelha.js"></script>
   </head>
 
   <body>
@@ -28,58 +29,68 @@
   				<span><strong>Grau de Dificuldade ?</strong></span>
   				<br>
   				<br>
-  				<select id="GrauDificuldade" class="form-contro">
-  					<option value="1">Fácil</option>
-  					<option value="2">Médio</option>
-  					<option value="3">Dificil</option>
-  				</select>
+  				<div class="col-xs-4"></div>
+  				<div class="col-xs-4">
+					<select id="GrauDificuldade" class="form-control">
+						<option value="0" >-- Selecione --</option>
+						<option value="1">Fácil</option>
+						<option value="2">Médio</option>
+						<option value="3">Dificil</option>
+					</select>
+  				</div>
+  				<div class="col-xs-4"></div>
+
   				<br><br>  				
   			</div>
-  			
-			<button class="btn btn-default btn-block">
-				Reiniciar Jogo
+  			<button onclick="IniciarJogo()" class="btn btn-default btn-block">
+				Iniciar o Jogo
 			</button>
-  			
-  			<div class="col-xs-6 Pontuacao">
+			<button class="btn btn-default btn-block">
+				Reiniciar o Jogo
+			</button>
+  			<div id="CorpoMensagem" class="col-xs12">
+  				
+  			</div>
+  			<div id="EscolherXO1" onclick="FirstPlayer('X')" class="col-xs-6 EscolherXO">
   				Pontuação X
   			</div>
-  			<div class="col-xs-6 Pontuacao">
+  			<div id="EscolherXO2" onclick="FirstPlayer('O')" class="col-xs-6 EscolherXO">
   				Pontuação O
   			</div>
   			<div id="CorpoJogo" class="col-xs-12">
   				<div class="col-sm-4"></div>
   				<div class="col-xs-12 col-sm-4">
   					<div class="row Linhas">
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p0" onclick="InserirElemento('p0', Jogador)" class="col-xs-4 Colunas">
 	  						P0
 	  					</div>
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p1" onclick="InserirElemento('p1', Jogador)" class="col-xs-4 Colunas">
 	  						P1
 	  					</div>
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p2" onclick="InserirElemento('p2', Jogador)" class="col-xs-4 Colunas">
+	  						P2
+	  					</div>
+	  				</div>
+	  				<div class="row Linhas">
+	  					<div id="p3" onclick="InserirElemento('p3', Jogador)" class="col-xs-4 Colunas">
 	  						P3
 	  					</div>
-	  				</div>
-	  				<div class="row Linhas">
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p4" onclick="InserirElemento('p4', Jogador)" class="col-xs-4 Colunas">
 	  						P4
 	  					</div>
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p5" onclick="InserirElemento('p5', Jogador)"  class="col-xs-4 Colunas">
 	  						P5
-	  					</div>
-	  					<div class="col-xs-4 Colunas">
-	  						P6
 	  					</div>
 	  				</div>
 	  				<div class="row Linhas">
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p6" onclick="InserirElemento('p6', Jogador)"  class="col-xs-4 Colunas">
+	  						P6
+	  					</div>
+	  					<div id="p7" onclick="InserirElemento('p7', Jogador)"  class="col-xs-4 Colunas">
 	  						P7
 	  					</div>
-	  					<div class="col-xs-4 Colunas">
+	  					<div id="p8" onclick="InserirElemento('p8', Jogador)"  class="col-xs-4 Colunas">
 	  						P8
-	  					</div>
-	  					<div class="col-xs-4 Colunas">
-	  						P9
 	  					</div>
 	  				</div>
   				</div>
