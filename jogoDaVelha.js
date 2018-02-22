@@ -1,11 +1,20 @@
-
+var Jogador = null;
+var TabuleiroJogo = [
+					[null,null,null],
+					[null,null,null],
+					[null,null,null]
+				]
 
 function IniciarJogo(){
-	//alert('teste');
+
 	document.getElementById('EscolherXO1').style.display = 'block';
 	document.getElementById('EscolherXO2').style.display = 'block';
-	var Jogador = null;
+
 	document.getElementById('CorpoMensagem').innerHTML = "1º Jogador escolha se você quer ser o 'X' ou 'O' (clique na Opção Abaixo)!!!"
+		
+
+	
+	
 	
 
 }
@@ -17,6 +26,7 @@ function FirstPlayer(opcao){
 	Jogador = opcao;
 	document.getElementById('EscolherXO1').style.display = 'none';
 	document.getElementById('EscolherXO2').style.display = 'none';
+	document.getElementById('CorpoJogo').style.display = 'block';
 	document.getElementById('CorpoMensagem').innerHTML = "";
 }
 
@@ -29,7 +39,27 @@ function TrocarJogador(jogador){
 	}
 }
 
-function InserirElemento(posicao) {
-	document.getElementById(posicao).innerHTML = Jogador;
-	TrocarJogador(Jogador);
+function AtualizarMatriz(linha, coluna, id, elemento){
+	if (TabuleiroJogo[linha][coluna] == null){
+		document.getElementById('CorpoMensagem').innerHTML = ""
+		TabuleiroJogo[linha][coluna] = elemento;	
+		document.getElementById(id).innerHTML = Jogador;
+		TrocarJogador(Jogador);
+	}
+	else{
+		document.getElementById('CorpoMensagem').innerHTML = "Você não pode jogar neste espaço!!"
+	}
+	
+}
+function Mostrar(){
+	var string = ""
+	for (var i = 0; i < 3; i++){
+		for (var j = 0; j < 3; j++) {
+			string += TabuleiroJogo[i][j] + " ";
+
+		}
+		string += '<br>';
+	}
+	document.getElementById('mostrar').innerHTML = string;
+
 }

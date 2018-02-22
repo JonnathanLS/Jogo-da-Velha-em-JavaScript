@@ -61,35 +61,44 @@
   				<div class="col-sm-4"></div>
   				<div class="col-xs-12 col-sm-4">
   					<div class="row Linhas">
-	  					<div id="p0" onclick="InserirElemento('p0', Jogador)" class="col-xs-4 Colunas">
+	  					<div id="p0" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(0, 0, 'p0', Jogador)">
 	  						P0
 	  					</div>
-	  					<div id="p1" onclick="InserirElemento('p1', Jogador)" class="col-xs-4 Colunas">
+	  					<div id="p1" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(0, 1, 'p1', Jogador)">
 	  						P1
 	  					</div>
-	  					<div id="p2" onclick="InserirElemento('p2', Jogador)" class="col-xs-4 Colunas">
+	  					<div id="p2" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(0, 2, 'p2', Jogador)">
 	  						P2
 	  					</div>
 	  				</div>
 	  				<div class="row Linhas">
-	  					<div id="p3" onclick="InserirElemento('p3', Jogador)" class="col-xs-4 Colunas">
+	  					<div id="p3" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(1, 0, 'p3', Jogador)">
 	  						P3
 	  					</div>
-	  					<div id="p4" onclick="InserirElemento('p4', Jogador)" class="col-xs-4 Colunas">
+	  					<div id="p4" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(1, 1, 'p4', Jogador)">
 	  						P4
 	  					</div>
-	  					<div id="p5" onclick="InserirElemento('p5', Jogador)"  class="col-xs-4 Colunas">
+	  					<div id="p5" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(1, 2, 'p5', Jogador)">
 	  						P5
 	  					</div>
 	  				</div>
 	  				<div class="row Linhas">
-	  					<div id="p6" onclick="InserirElemento('p6', Jogador)"  class="col-xs-4 Colunas">
+	  					<div id="p6" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(2, 0, 'p6', Jogador)">
 	  						P6
 	  					</div>
-	  					<div id="p7" onclick="InserirElemento('p7', Jogador)"  class="col-xs-4 Colunas">
+	  					<div id="p7" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(2, 1, 'p7', Jogador)">
 	  						P7
 	  					</div>
-	  					<div id="p8" onclick="InserirElemento('p8', Jogador)"  class="col-xs-4 Colunas">
+	  					<div id="p8" class="col-xs-4 Colunas" 
+	  					onclick="AtualizarMatriz(2, 2, 'p8', Jogador)">
 	  						P8
 	  					</div>
 	  				</div>
@@ -97,6 +106,10 @@
   				<div class="col-sm-4"></div>
   			</div>
   		</div>
+  	</div>
+
+  	<div onclick="Mostrar()" id="mostrar">
+  		mostrar
   	</div>
 
 

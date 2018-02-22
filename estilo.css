@@ -19,6 +19,7 @@ div{
 }
 #CorpoJogo{
 	padding: 30px;
+	display: none;
 }
 #GrauDificuldade{
 	width: 160px;
