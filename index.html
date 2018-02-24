@@ -10,7 +10,8 @@
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="estilo.css" rel="stylesheet">
+    <link href="estilo.css" type="text/css" rel="stylesheet">
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,14 +24,31 @@
 
   <body>
 
-  	<div class="container">
+  	<div id="QuadroPrincipal" class="container">
   		<div class="row">
-  			<div id="CorpoMenu" class="col-xs-12">
-  				<span><strong>Grau de Dificuldade ?</strong></span>
+  			<div id="Banner" class="col-xs-12">
+				
+				<strong>
+					<span style="color: blue">Jogar contra o Computador:</span>
+					<br>
+  					<span>Grau de Dificuldade ?</span>
+  				</strong>
   				<br>
   				<br>
-  				<div class="col-xs-4"></div>
-  				<div class="col-xs-4">
+  				<span id="EmProducao"><strong>Em Produção</strong></span>
+  				
+  			</div>
+			<div id="CorpoMenu" class="col-xs-12">
+				
+				<strong>
+					<span style="color: blue">Jogar contra o Computador:</span>
+					<br>
+  					<span>Grau de Dificuldade ?</span>
+  				</strong>
+  				<br>
+  				<br>
+  				<div class="col-xs-2 col-sm-4"></div>
+  				<div class="col-xs-8 col-sm-4">
 					<select id="GrauDificuldade" class="form-control">
 						<option value="0" >-- Selecione --</option>
 						<option value="1">Fácil</option>
@@ -38,81 +56,85 @@
 						<option value="3">Dificil</option>
 					</select>
   				</div>
-  				<div class="col-xs-4"></div>
-
-  				<br><br>  				
+  				<div class="col-xs-2 col-sm-4"></div>
+  				
   			</div>
-  			<button id="IniciarJogo" onclick="IniciarJogo()" class="btn btn-default btn-block">
-				Iniciar o Jogo
+  			<button id="IniciarJogo" onclick="IniciarJogo()" class="btn btn-success btn-block">
+				<strong>Jogar Contra um Amigo</strong>
 			</button>
-			<button id="ReiniciarJogo" onclick="ReiniciarJogo()" class="btn btn-default btn-block">
-				Reiniciar o Jogo
+			<button id="ReiniciarJogo" onclick="ReiniciarJogo()" class="btn btn-warning btn-block">
+				<strong>Reiniciar o Jogo</strong>
 			</button>
   			<div id="CorpoMensagem" class="col-xs12">
   				
   			</div>
   			<div id="EscolherXO1" onclick="FirstPlayer('X')" class="col-xs-6 EscolherXO">
-  				Pontuação X
+  				<strong>X</strong>
   			</div>
   			<div id="EscolherXO2" onclick="FirstPlayer('O')" class="col-xs-6 EscolherXO">
-  				Pontuação O
+  				<strong>O</strong>
   			</div>
+  			<strong>
   			<div id="CorpoJogo" class="col-xs-12">
   				<div class="col-sm-4"></div>
   				<div class="col-xs-12 col-sm-4">
-  					<div class="row Linhas">
-	  					<div id="p0" class="col-xs-4 Colunas" 
-	  					onclick="AtualizarMatriz(0, 0, 'p0', Jogador)">
-	  						P0
+  					<div class="row">
+	  					<div id="p0" class="col-xs-4 Colunas BorderTop BorderLeft" 
+	  					onclick="AtualizarMatriz(0, 0, 'p0', Jogador), Quadrante('p0')">
+	  						
 	  					</div>
-	  					<div id="p1" class="col-xs-4 Colunas" 
+	  					<div id="p1" class="col-xs-4 Colunas BorderTop" 
 	  					onclick="AtualizarMatriz(0, 1, 'p1', Jogador)">
-	  						P1
+	  						
 	  					</div>
-	  					<div id="p2" class="col-xs-4 Colunas" 
+	  					<div id="p2" class="col-xs-4 Colunas BorderTop BorderRight" 
 	  					onclick="AtualizarMatriz(0, 2, 'p2', Jogador)">
-	  						P2
+	  						
 	  					</div>
 	  				</div>
-	  				<div class="row Linhas">
-	  					<div id="p3" class="col-xs-4 Colunas" 
+	  				<div class="row">
+	  					<div id="p3" class="col-xs-4 Colunas BorderLeft" 
 	  					onclick="AtualizarMatriz(1, 0, 'p3', Jogador)">
-	  						P3
+	  						
 	  					</div>
-	  					<div id="p4" class="col-xs-4 Colunas" 
+	  					<div id="p4" class="col-xs-4 Colunas " 
 	  					onclick="AtualizarMatriz(1, 1, 'p4', Jogador)">
-	  						P4
+	  						
 	  					</div>
-	  					<div id="p5" class="col-xs-4 Colunas" 
+	  					<div id="p5" class="col-xs-4 Colunas BorderRight" 
 	  					onclick="AtualizarMatriz(1, 2, 'p5', Jogador)">
-	  						P5
+	  						
 	  					</div>
 	  				</div>
-	  				<div class="row Linhas">
-	  					<div id="p6" class="col-xs-4 Colunas" 
+	  				<div class="row">
+	  					<div id="p6" class="col-xs-4 Colunas BorderBottom BorderLeft " 
 	  					onclick="AtualizarMatriz(2, 0, 'p6', Jogador)">
-	  						P6
+	  						
 	  					</div>
-	  					<div id="p7" class="col-xs-4 Colunas" 
+	  					<div id="p7" class="col-xs-4 Colunas BorderBottom" 
 	  					onclick="AtualizarMatriz(2, 1, 'p7', Jogador)">
-	  						P7
+	  						
 	  					</div>
-	  					<div id="p8" class="col-xs-4 Colunas" 
+	  					<div id="p8" class="col-xs-4 Colunas BorderBottom BorderRight" 
 	  					onclick="AtualizarMatriz(2, 2, 'p8', Jogador)">
-	  						P8
+	  						
 	  					</div>
 	  				</div>
   				</div>
   				<div class="col-sm-4"></div>
   			</div>
-  			<div id="Resultado" class="col-xs-12">
-	  			Resultado
+  			</strong>
+  			
+	  		<div class="col-xs-12" onclick="Mostrar()" id="Resultado">
+	  			Visualizar Resultado Completo do Jogo !
 	  		</div>
-	  		<div class="col-xs-12" onclick="Mostrar()" id="mostrar">
-	  			mostrar
-	  		</div>
-  		</div>  		
+  		</div>
+
   	</div>
+  	<br>
+  	<div><a style="color: white;" href="index.html">Página Inicial</a></div>
+  	<br>
+  	
 
   	
 
